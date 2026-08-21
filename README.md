@@ -34,3 +34,15 @@ refugee-tracking-system/
 ├── server.js                # Express.js REST API Server
 ├── package.json             # Project Dependencies & Scripts
 └── README.md                # Project Documentation
+
++------------------+         +------------------+         +--------------------+
+|   RELIEF_CAMPS   | <-----+ |    SURVIVORS     |         |   CAMP_INVENTORY   |
++------------------+         +------------------+         +--------------------+
+| PK camp_id       |         | PK survivor_id   |         | PK inventory_id    |
+|    camp_name     |         | FK camp_id       |         | FK camp_id         |
+|    district      |         |    full_name     |         |    item_name       |
+|    capacity      |         |    age / gender  |         |    category        |
+|    occupancy     |         |    origin_village|         |    quantity / unit |
+|    contact_officer         |    vulnerability |         +--------------------+
++------------------+         |    medical_need  |
+                             +------------------+
